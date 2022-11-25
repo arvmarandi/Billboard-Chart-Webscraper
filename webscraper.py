@@ -25,7 +25,7 @@ def getSongTitles():
         return songTitles 
 
 def main():
-    f = open("./top_songs_2022.txt", "w")
+    f = open("INSERT_FILE", "w") #IMPORTANT: input the name of the text file you would like to write in
     songTitles = getSongTitles() 
     for i in range(len(songTitles)):
         f.write(songTitles[i] + "\n")
