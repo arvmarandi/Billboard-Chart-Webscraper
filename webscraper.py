@@ -25,7 +25,7 @@ def getSongTitles():
         return songTitles 
 
 def main():
-    f = open("./data/top_songs_2022.txt", "w")
+    f = open("./top_songs_2022.txt", "w")
     songTitles = getSongTitles() 
     for i in range(len(songTitles)):
         f.write(songTitles[i] + "\n")
