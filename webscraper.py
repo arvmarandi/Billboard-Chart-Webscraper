@@ -2,7 +2,7 @@ import urllib.request
 from pprint import pprint
 
 def getSongTitles(): 
-        fp = urllib.request.urlopen("INSERT_LINK") #IMPORTANT: insert the link to the billboard chart you would like to retrieve songs from. For example: https://www.billboard.com/charts/hot-100/2022-10-15/
+        fp = urllib.request.urlopen("INSERT_LINK") #IMPORTANT: insert the link to the billboard chart you would like to retrieve songs from where it says INSERT_LINK. For example: https://www.billboard.com/charts/hot-100/2022-10-15/
         mybytes = fp.read() 
 
         mystr = mybytes.decode("utf8") 
@@ -25,7 +25,7 @@ def getSongTitles():
         return songTitles 
 
 def main():
-    f = open("INSERT_FILE", "w") #IMPORTANT: insert the name of the text file you would like to write in
+    f = open("INSERT_FILE", "w") #IMPORTANT: insert the name of the text file you would like to write in where it says INSERT_FILE
     songTitles = getSongTitles() 
     for i in range(len(songTitles)):
         f.write(songTitles[i] + "\n")
